@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- use boostrap for modal screen: -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- use 'jQuery UI' for effects (shake, ...): -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+          </ul>
+
+          <span class="moves">0</span> Moves in <span class="minutes">00</span> minutes <span class="seconds">00</span> seconds
+          <div class="restart">
+            <i class="fa fa-repeat"></i>
+          </div>
+        </section>
+
+        <ul class="deck"></ul>
+    </div>
+
+    <!-- Modal -->
+    <div id="finishedModal" class="modal fade" role="dialog">
+      <div class="modal-dialog text-center">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Matching Game</h4>
+          </div>
+          <div class="modal-body">
+            <p>Congratulations! You won in <span class="minutes">00</span> minutes and <span class="seconds">00</span> seconds!</p>
+            <p>With <span class="moves">0</span> Moves and <span id="stars">0</span> Stars.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary restart center-block" data-dismiss="modal">Play again!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    load javascript at the end of the <body> tag to render the page faster:
+    otherwise the browser will download the script file before rendering the application
+    -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
